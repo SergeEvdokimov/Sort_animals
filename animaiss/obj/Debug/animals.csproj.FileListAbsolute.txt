@@ -1,0 +1,4 @@
+C:\Users\Сергей\source\repos\animaiss\animaiss\obj\Debug\animals.csprojAssemblyReference.cache
+C:\Users\Сергей\source\repos\animaiss\animaiss\obj\Debug\animals.Form1.resources
+C:\Users\Сергей\source\repos\animaiss\animaiss\obj\Debug\animaiss.Properties.Resources.resources
+C:\Users\Сергей\source\repos\animaiss\animaiss\obj\Debug\animals.csproj.GenerateResource.cache
