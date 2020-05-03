@@ -1,4 +1,4 @@
-﻿namespace animals
+﻿namespace animaiss
 {
     partial class Form1
     {
@@ -51,6 +51,7 @@
             this.pbArray8 = new System.Windows.Forms.PictureBox();
             this.pbArray9 = new System.Windows.Forms.PictureBox();
             this.pbArray10 = new System.Windows.Forms.PictureBox();
+            this.tbBinarySearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbArray1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArray2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArray3)).BeginInit();
@@ -75,12 +76,13 @@
             // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(354, 368);
+            this.btnSort.Location = new System.Drawing.Point(346, 368);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(100, 38);
             this.btnSort.TabIndex = 1;
             this.btnSort.Text = "Sort!";
             this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // btnBinSearch
             // 
@@ -90,6 +92,7 @@
             this.btnBinSearch.TabIndex = 2;
             this.btnBinSearch.Text = "BinarySearch";
             this.btnBinSearch.UseVisualStyleBackColor = true;
+            this.btnBinSearch.Click += new System.EventHandler(this.btnBinSearch_Click);
             // 
             // lbArray1
             // 
@@ -112,7 +115,7 @@
             // lbArray3
             // 
             this.lbArray3.AutoSize = true;
-            this.lbArray3.Location = new System.Drawing.Point(382, 147);
+            this.lbArray3.Location = new System.Drawing.Point(369, 147);
             this.lbArray3.Name = "lbArray3";
             this.lbArray3.Size = new System.Drawing.Size(46, 17);
             this.lbArray3.TabIndex = 5;
@@ -148,7 +151,7 @@
             // lbArray7
             // 
             this.lbArray7.AutoSize = true;
-            this.lbArray7.Location = new System.Drawing.Point(214, 318);
+            this.lbArray7.Location = new System.Drawing.Point(224, 318);
             this.lbArray7.Name = "lbArray7";
             this.lbArray7.Size = new System.Drawing.Size(46, 17);
             this.lbArray7.TabIndex = 9;
@@ -175,7 +178,7 @@
             // lbArray10
             // 
             this.lbArray10.AutoSize = true;
-            this.lbArray10.Location = new System.Drawing.Point(649, 318);
+            this.lbArray10.Location = new System.Drawing.Point(657, 318);
             this.lbArray10.Name = "lbArray10";
             this.lbArray10.Size = new System.Drawing.Size(54, 17);
             this.lbArray10.TabIndex = 12;
@@ -199,7 +202,7 @@
             // 
             // pbArray3
             // 
-            this.pbArray3.Location = new System.Drawing.Point(354, 94);
+            this.pbArray3.Location = new System.Drawing.Point(337, 94);
             this.pbArray3.Name = "pbArray3";
             this.pbArray3.Size = new System.Drawing.Size(100, 50);
             this.pbArray3.TabIndex = 15;
@@ -239,7 +242,7 @@
             // 
             // pbArray8
             // 
-            this.pbArray8.Location = new System.Drawing.Point(354, 247);
+            this.pbArray8.Location = new System.Drawing.Point(337, 247);
             this.pbArray8.Name = "pbArray8";
             this.pbArray8.Size = new System.Drawing.Size(100, 50);
             this.pbArray8.TabIndex = 20;
@@ -261,11 +264,19 @@
             this.pbArray10.TabIndex = 22;
             this.pbArray10.TabStop = false;
             // 
+            // tbBinarySearch
+            // 
+            this.tbBinarySearch.Location = new System.Drawing.Point(759, 380);
+            this.tbBinarySearch.Name = "tbBinarySearch";
+            this.tbBinarySearch.Size = new System.Drawing.Size(100, 22);
+            this.tbBinarySearch.TabIndex = 23;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 482);
+            this.Controls.Add(this.tbBinarySearch);
             this.Controls.Add(this.pbArray10);
             this.Controls.Add(this.pbArray9);
             this.Controls.Add(this.pbArray8);
@@ -331,6 +342,7 @@
         private System.Windows.Forms.PictureBox pbArray8;
         private System.Windows.Forms.PictureBox pbArray9;
         private System.Windows.Forms.PictureBox pbArray10;
+        private System.Windows.Forms.TextBox tbBinarySearch;
     }
 }
 

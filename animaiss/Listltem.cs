@@ -5,13 +5,13 @@ using System.Drawing;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace animals
+namespace animaiss
 {
-    class Listltem
+    class ListItem
     {
         private Image image;
         private string name;
-        public Listltem(Image _image, string _name)
+        public ListItem(Image _image, string _name)
         {
             image = _image;
             name = _name;

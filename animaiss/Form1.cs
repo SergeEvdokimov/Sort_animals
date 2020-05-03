@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace animals
+namespace animaiss
 {
     public partial class Form1 : Form
     {
@@ -18,28 +18,37 @@ namespace animals
             init_form();
         }
         bool is_sorted;
-        List<Listltem> elements;
-        List<FormListltem> form_elements;
-        private void init_elemenys()
+        List<ListItem> elements;
+        List<FormListItem> form_elements;
+        private void init_elements()
         {
-            elements = new List<Listltem>();
-            elements.Add(new Listltem(Properties.Recources._1, "енот"));
+            elements = new List<ListItem>();
+            elements.Add(new ListItem(Properties.Resources._1, "енот"));
+            elements.Add(new ListItem(Properties.Resources._2, "белка"));
+            elements.Add(new ListItem(Properties.Resources._3, "тигр"));
+            elements.Add(new ListItem(Properties.Resources._4, "леопардик"));
+            elements.Add(new ListItem(Properties.Resources._5, "зайчик"));
+            elements.Add(new ListItem(Properties.Resources._6, "лимур"));
+            elements.Add(new ListItem(Properties.Resources._7, "зебры"));
+            elements.Add(new ListItem(Properties.Resources._8, "суслики"));
+            elements.Add(new ListItem(Properties.Resources._9, "лев")); 
+            elements.Add(new ListItem(Properties.Resources._10, "панды"));
         }
-        private void init_form_elemenys()
+        private void init_form_elements()
         {
-           form_elements = new List<FormListltem>();
-            form_elements.Add(new FormListltem(pbArray1, lbArray1));
-            form_elements.Add(new FormListltem(pbArray2, lbArray2));
-            form_elements.Add(new FormListltem(pbArray3, lbArray3));
-            form_elements.Add(new FormListltem(pbArray4, lbArray4));
-            form_elements.Add(new FormListltem(pbArray5, lbArray5));
-            form_elements.Add(new FormListltem(pbArray6, lbArray6));
-            form_elements.Add(new FormListltem(pbArray7, lbArray7));
-            form_elements.Add(new FormListltem(pbArray8, lbArray8));
-            form_elements.Add(new FormListltem(pbArray9, lbArray9));
-            form_elements.Add(new FormListltem(pbArray10, lbArray10));
+           form_elements = new List<FormListItem>();
+            form_elements.Add(new FormListItem(pbArray1, lbArray1));
+            form_elements.Add(new FormListItem(pbArray2, lbArray2));
+            form_elements.Add(new FormListItem(pbArray3, lbArray3));
+            form_elements.Add(new FormListItem(pbArray4, lbArray4));
+            form_elements.Add(new FormListItem(pbArray5, lbArray5));
+            form_elements.Add(new FormListItem(pbArray6, lbArray6));
+            form_elements.Add(new FormListItem(pbArray7, lbArray7));
+            form_elements.Add(new FormListItem(pbArray8, lbArray8));
+            form_elements.Add(new FormListItem(pbArray9, lbArray9));
+            form_elements.Add(new FormListItem(pbArray10, lbArray10));
         }
-        private void show_elemenys()
+        private void show_elements()
         {
             for(int i = 0; i < form_elements.Count;i++)
             {
@@ -51,11 +60,11 @@ namespace animals
         }
         private void init_form()
         {
-            show_elemenys();
-            init_form_elemenys();
-            init_elemenys();
-            is_sorted = false;
-            btnBinSearch.Enabled = false;
+            init_form_elements();
+            init_elements();
+            show_elements();
+            binary_search_actions(false);
+            set_default_colors();
         }
         private List<int> get_indexies ()
         {
@@ -80,12 +89,59 @@ namespace animals
                 free_indexies.RemoveAt(elem_index);
             }
             is_sorted = false;
-            btnBinSearch.Enabled = false;
+            binary_search_actions(false);
         }
 
         private void btnMixed_Click(object sender, EventArgs e)
         {
             mixed_elements();
         }
-    }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            sort_elements();
+        }
+        private void sort_elements()
+        {
+            QuickSort.quick_sort(elements);
+            is_sorted = true;
+            btnBinSearch.Enabled = true;
+            show_elements();
+        }
+        private void binary_search_actions(bool value)
+        {
+            btnBinSearch.Enabled = value;
+            tbBinarySearch.ReadOnly = !value;
+            tbBinarySearch.Text = "";
+        }
+        private void binary_search(string key)
+        {
+            int index = BinarySearch.binarySearch(elements, key);
+            if (index != -1)
+            {
+                form_elements[index].Lb.BackColor = Color.GreenYellow;
+            }
+            else
+            {
+                MessageBox.Show("Элемент не найден.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+;            }
+        }
+        private void set_default_colors()
+        {
+            for(int i = 0; i < form_elements.Count; i ++)
+            {
+                form_elements[i].Lb.BackColor = Color.White;
+            }
+        }
+
+        private void btnBinSearch_Click(object sender, EventArgs e)
+        {
+            if (is_sorted)
+            {
+                tbBinarySearch.ReadOnly = false;
+                set_default_colors();
+                binary_search(tbBinarySearch.Text);
+            }
+        }
+    }   
 }
