@@ -26,7 +26,8 @@ namespace animaiss
             tmp = array[end];
             array[end] = array[small];
             array[small] = tmp;
-            return 0;
+            //return 0;     было
+            return small; //стало
         }
         private static void quick_sort_helper(List<ListItem> array, int start, int end)
         {

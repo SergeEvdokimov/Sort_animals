@@ -11,3 +11,13 @@ C:\Users\Сергей\source\repos\animaiss\sort animals\animaiss\obj\Debug\anim
 C:\Users\Сергей\source\repos\animaiss\sort animals\animaiss\obj\Debug\animals.csproj.GenerateResource.cache
 C:\Users\Сергей\source\repos\animaiss\sort animals\animaiss\obj\Debug\animaiss.exe
 C:\Users\Сергей\source\repos\animaiss\sort animals\animaiss\obj\Debug\animaiss.pdb
+C:\Users\Michael\Desktop\sort\Sort_animals\animaiss\bin\Debug\animaiss.exe.config
+C:\Users\Michael\Desktop\sort\Sort_animals\animaiss\bin\Debug\animaiss.exe
+C:\Users\Michael\Desktop\sort\Sort_animals\animaiss\bin\Debug\animaiss.pdb
+C:\Users\Michael\Desktop\sort\Sort_animals\animaiss\obj\Debug\animals.csprojAssemblyReference.cache
+C:\Users\Michael\Desktop\sort\Sort_animals\animaiss\obj\Debug\animaiss.Form1.resources
+C:\Users\Michael\Desktop\sort\Sort_animals\animaiss\obj\Debug\animaiss.Properties.Resources.resources
+C:\Users\Michael\Desktop\sort\Sort_animals\animaiss\obj\Debug\animals.csproj.GenerateResource.cache
+C:\Users\Michael\Desktop\sort\Sort_animals\animaiss\obj\Debug\animals.csproj.CoreCompileInputs.cache
+C:\Users\Michael\Desktop\sort\Sort_animals\animaiss\obj\Debug\animaiss.exe
+C:\Users\Michael\Desktop\sort\Sort_animals\animaiss\obj\Debug\animaiss.pdb
