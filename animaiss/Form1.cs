@@ -94,18 +94,21 @@ namespace animaiss
 
         private void btnMixed_Click(object sender, EventArgs e)
         {
+            set_default_colors();
             mixed_elements();
         }
 
         private void btnSort_Click(object sender, EventArgs e)
         {
+            set_default_colors();
             sort_elements();
         }
         private void sort_elements()
         {
             QuickSort.quick_sort(elements);
             is_sorted = true;
-            btnBinSearch.Enabled = true;
+            //btnBinSearch.Enabled = true; было
+            binary_search_actions(true); //стало
             show_elements();
         }
         private void binary_search_actions(bool value)
